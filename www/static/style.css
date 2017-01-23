@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, input {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+}
+
+p, ul {
+    line-height: 24px;
+}
+pre {
+    font-size: 15px;
+    line-height: 20px;
+}
+
+body {
+    margin: 16px;
+}
+
+h1, h2, h3, p, ul, table, pre {
+    margin: 8px 0;
+}
+
+h1 {
+    margin-bottom: 16px;
+    border-bottom: 1px solid #999;
+    font-size: 24px;
+}
+h2 {
+    margin-top: 16px;
+    border-bottom: 1px solid #CCC;
+    font-size: 20px;
+}
+h3 {
+    margin-top: 16px;
+    font-size: 16px;
+}
+
+ul {
+    margin-left: 32px;
+}
+p + ul {
+    margin-top: -8px;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 2px 8px;
+}
+tr:hover {
+    background: #F9F9F9;
+}
+
+input[type=text] {
+    width: 100%;
+    max-width: 300px;
+    padding: 2px 4px;
+}
+textarea {
+    width: 100%;
+    max-width: 600px;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+h2 a, h3 a, #menu a {
+    color: blue
+}
+#menu ul {
+    margin-left: 16px;
+    font-weight: bold;
+}
