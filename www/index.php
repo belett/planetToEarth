@@ -74,8 +74,7 @@ echo '<label for="id">'.$labelLang.'</label> :<br />
 // requete SPARQL
 $query = '
 SELECT ?item ?itemLabel ?cPlanet ?origin ?originLabel ?cEarth WHERE {
-	?item wdt:P376 wd:'.$id.' ; wdt:P625 ?cPlanet .
-	optional { ?item wdt:P138 ?origin }. 
+	?item wdt:P376 wd:'.$id.' ; wdt:P625 ?cPlanet ; wdt:P138 ?origin .
 	minus { ?origin wdt:P376 [] } .
 	?origin wdt:P625 ?cEarth .
 	SERVICE wikibase:label { bd:serviceParam wikibase:language "'.$lang.'" }
