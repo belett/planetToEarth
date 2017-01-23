@@ -1,0 +1,9 @@
+{
+    "name" : "planettoearth",
+    "title" : "Planet to Earth - links in space",
+    "description" : "Create correpondance between named places on planets and Earth.",
+    "url" : "https://tools.wmflabs.org/planettoearth/",
+    "keywords" : "wikidata, multilingual, svg, map, maps, check",
+    "author" : "VIGNERON",
+    "repository" : null
+}
