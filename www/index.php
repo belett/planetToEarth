@@ -31,15 +31,9 @@ $id = isset( $_GET['id']) ? $_GET['id'] : $availableBodies[0] ;
 if ( ! in_array ($id, $availableBodies)) {
 	$id = $availableBodies[0] ;
 }
-	
-echo '<h1>Planet to Earth - links in space</h1>
-<form method="get" >
-<label for="lang">Lang</label> :
-<select name="lang">
-<option value="en">English</option>
-<option value="fr">français</option>
-<option value="br">brezhoneg</option>
-</select>';
+
+echo '<h1>Planet to Earth - links in space</h1>' ;
+
 switch ($lang) {
     case "fr" :
         echo "<p>Cet outil utilise les données <a href=http://wikidata.org/>Wikidata</a> pour visualiser les liens entre les lieux sur un corps astronomique nommés en référence à un lieu situé sur la planète <a href=https://fr.wikipedia.org/wiki/Terre>Terre</a>.</p>";
@@ -54,15 +48,25 @@ switch ($lang) {
         $labelLang = "Dibab ur c’horf";
 		break;
 }
+
+echo '
+<form method="get" >
+<label for="lang">Lang</label> :
+<select name="lang">
+<option value="en"' . ( $lang == 'en' ? ' selected="selected"' : '' ) . '>English</option>
+<option value="fr"' . ( $lang == 'fr' ? ' selected="selected"' : '' ) . '>français</option>
+<option value="br"' . ( $lang == 'br' ? ' selected="selected"' : '' ) . '>brezhoneg</option>
+</select>';
+
 echo '<label for="id">'.$labelLang.'</label> :<br />
 <select name="id">
-<option value="Q111">Mars</option>
-<option value="Q308">Mercure</option>
-<option value="Q313">Vénus</option>
-<option value="Q405">Lune</option>
-<option value="Q2565">Titan</option>
-<option value="Q3123">Io</option>
-<option value="Q3169">Ganymède</option>
+<option value="Q111"' . ( $lang == 'Q111' ? ' selected="selected"' : '' ) . '>Mars</option>
+<option value="Q308"' . ( $lang == 'Q308' ? ' selected="selected"' : '' ) . '>Mercure</option>
+<option value="Q313"' . ( $lang == 'Q313' ? ' selected="selected"' : '' ) . '>Vénus</option>
+<option value="Q405"' . ( $lang == 'Q405' ? ' selected="selected"' : '' ) . '>Lune</option>
+<option value="Q2565"' . ( $lang == 'Q2565' ? ' selected="selected"' : '' ) . '>Titan</option>
+<option value="Q3123"' . ( $lang == 'Q3123' ? ' selected="selected"' : '' ) . '>Io</option>
+<option value="Q3169"' . ( $lang == 'Q3169' ? ' selected="selected"' : '' ) . '>Ganymède</option>
 </select>
 <input type="submit" value="Go" />
 </form>';
