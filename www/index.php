@@ -56,9 +56,8 @@ echo '
 <option value="en"' . ( $lang == 'en' ? ' selected="selected"' : '' ) . '>English</option>
 <option value="fr"' . ( $lang == 'fr' ? ' selected="selected"' : '' ) . '>français</option>
 <option value="br"' . ( $lang == 'br' ? ' selected="selected"' : '' ) . '>brezhoneg</option>
-</select>';
-
-echo '<label for="id">'.$labelLang.'</label> :<br />
+</select><br />
+<label for="id">'.$labelLang.'</label> :<br />
 <select name="id">
 <option value="Q111"' . ( $lang == 'Q111' ? ' selected="selected"' : '' ) . '>Mars</option>
 <option value="Q308"' . ( $lang == 'Q308' ? ' selected="selected"' : '' ) . '>Mercure</option>
