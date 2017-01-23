@@ -18,21 +18,32 @@
 define('PAGE_TITLE', 'Planet to Earth');
 require '../inc/load.inc.php';
 
+$availableLanguages = ["en","fr","br"] ;
+$lang = isset( $_GET['lang']) ? $_GET['lang'] : $availableLanguages[0] ;
+// test
+if ( in_array ($lang, $availableLanguages)) {
+	$lang = $availableLanguages[0] ;
+}
+
+$availableBodies = ["Q111","Q308","Q313","Q405","Q2565","Q3123","Q3169"] ;
+$id = isset( $_GET['id']) ? $_GET['id'] : $availableBodies[0] ;
+// test
+if ( in_array ($id, $availableBodies)) {
+	$id = $availableBodies[0] ;
+}
+	
 echo '<h1>Planet to Earth - links in space</h1>
-<form method="post" >
+<form method="get" >
 <label for="lang">Lang</label> :
 <select name="lang">
 <option value="en">English</option>
 <option value="fr">français</option>
 <option value="br">brezhoneg</option>
-</select>
-<input type="submit" value="Go" />';
-$lang = "en" ;
-$lang = $_POST['lang'] ;
+</select>';
 switch ($lang) {
     case "fr" :
         echo "<p>Cet outil utilise les données <a href=http://wikidata.org/>Wikidata</a> pour visualiser les liens entre les lieux sur un corps astronomique nommés en référence à un lieu situé sur la planète <a href=https://fr.wikipedia.org/wiki/Terre>Terre</a>.</p>";
-		$labelLang = "Choix d’un corps astronomique";
+	$labelLang = "Choix d’un corps astronomique";
         break;
     case "en":
         echo "<p>This tool use data from <a href=http://wikidata.org/>Wikidata</a> to visualise the links between places on an astronomical body named after a place on planet <a href=https://en.wikipedia.org/wiki/Earth>Earth</a>.</p>";
@@ -55,9 +66,6 @@ echo '<label for="id">'.$labelLang.'</label> :<br />
 </select>
 <input type="submit" value="Go" />
 </form>';
-
-$id = "Q111" ;
-$id = $_POST['id'] ;
 
 // contrôler la validité de la valeur (sait-on jamais !)
 
