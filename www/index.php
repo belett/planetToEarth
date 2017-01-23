@@ -158,7 +158,7 @@ echo '" /><image x="0" y="500" width="1000" height="500" xlink:href="https://upl
 //à traduire, donner le lien direct vers GitHub
 	echo '</svg></div>
 <p>Caveat : cet outil peut avoir des bugs, n’hésitez pas à me les signaler ainsi que tout suggestion d’amélioration.</p>
-<p>Outil par <a href="https://www.wikidata.org/wiki/User:VIGNERON">Nicolas Vigneron</a>, 2016 (special thanks to <a href="https://www.wikidata.org/wiki/User:Envlh">Envlh</a>, <a href="https://www.wikidata.org/wiki/User:Arkanosis">Arkanosis</a> and <a href="https://www.wikidata.org/wiki/User:Jean-Frédéric">Jean-Frédéric</a>) ; disponible sur <a href="https://github.com/belett/planetToEarth">ma page GitHub</a>.</p>';
+<p>Outil par <a href="https://www.wikidata.org/wiki/User:VIGNERON">Nicolas Vigneron</a>, 2016 (special thanks to <a href="https://www.wikidata.org/wiki/User:Envlh">Envlh</a>, <a href="https://www.wikidata.org/wiki/User:Arkanosis">Arkanosis</a>, <a href="https://www.wikidata.org/wiki/User:Jean-Frédéric">Jean-Frédéric</a> and <a href="https://www.wikidata.org/wiki/User:Seb35">Seb35</a>) ; disponible sur <a href="https://github.com/belett/planetToEarth">ma page GitHub</a>.</p>';
 	}
 ?>
 </body>
