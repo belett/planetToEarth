@@ -19,7 +19,7 @@ define('PAGE_TITLE', 'Planet to Earth');
 require '../inc/load.inc.php';
 
 echo '<h1>Planet to Earth - links in space</h1>
-<form method="post" action="planetToEarth.php" >
+<form method="post" >
 <label for="lang">Lang</label> :
 <select name="lang">
 <option value="en">English</option>
