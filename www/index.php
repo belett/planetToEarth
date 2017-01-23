@@ -11,7 +11,7 @@
 
 // TODO :
 // ajouter cartes manquantes
-// ajouter des langues et mieux les gérer ; dictionnaire avec code lang en clef ? voir https://wikitech.wikimedia.org/wiki/Help:Tool_Labs#Make_the_tool_translatable
+// ajouter des langues voir https://wikitech.wikimedia.org/wiki/Help:Tool_Labs#Make_the_tool_translatable
 // gérer les *fracking* coordonnées planétographiques/planétocentriques (attendre la propriété RCS ?)
 // passer le style du SVG dans le fichier CSS ? (essayer avec http://codepen.io/)
 
@@ -67,9 +67,7 @@ echo '<label for="id">'.$labelLang.'</label> :<br />
 <input type="submit" value="Go" />
 </form>';
 
-// contrôler la validité de la valeur (sait-on jamais !)
-
-#requete SPARQL
+// requete SPARQL
 $query = '
 SELECT ?item ?itemLabel ?cPlanet ?origin ?originLabel ?cEarth WHERE {
 	?item wdt:P376 wd:'.$id.' ; wdt:P625 ?cPlanet .
@@ -79,9 +77,11 @@ SELECT ?item ?itemLabel ?cPlanet ?origin ?originLabel ?cEarth WHERE {
 	SERVICE wikibase:label { bd:serviceParam wikibase:language "'.$lang.'" }
 }';
 
-$items = sparql::query($query);
-//vérifier si SPARQL ne répond pas ou timeout ?
-
+try { $items = sparql::query($query); }
+	catch ( Exception $e ) {
+	echo '<p>Problem, no results available.</p>';
+}
+	
 	if (count($items->results->bindings) === 0) {
 		echo '<p>No results.</p>';
     }
