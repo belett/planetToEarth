@@ -21,14 +21,14 @@ require '../inc/load.inc.php';
 $availableLanguages = ["en","fr","br"] ;
 $lang = isset( $_GET['lang']) ? $_GET['lang'] : $availableLanguages[0] ;
 // test
-if ( in_array ($lang, $availableLanguages)) {
+if ( ! in_array ($lang, $availableLanguages)) {
 	$lang = $availableLanguages[0] ;
 }
 
 $availableBodies = ["Q111","Q308","Q313","Q405","Q2565","Q3123","Q3169"] ;
 $id = isset( $_GET['id']) ? $_GET['id'] : $availableBodies[0] ;
 // test
-if ( in_array ($id, $availableBodies)) {
+if ( ! in_array ($id, $availableBodies)) {
 	$id = $availableBodies[0] ;
 }
 	
